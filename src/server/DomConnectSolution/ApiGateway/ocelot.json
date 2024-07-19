@@ -1,0 +1,391 @@
+{
+  "Routes": [
+    // Projects Web Api
+    // Interaction
+    {
+      "UpstreamPathTemplate": "/api/Interaction",
+      "UpstreamHttpMethod": [ "Post" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Interaction"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Interaction/{userId}",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Interaction/{userId}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Interaction/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Interaction/{id}"
+    },
+
+    // Interests
+    {
+      "UpstreamPathTemplate": "/api/interests",
+      "UpstreamHttpMethod": [ "Post" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/interests"
+    },
+    {
+      "UpstreamPathTemplate": "/api/interests/{userId}",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/interests/{userId}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/interests/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/interests/{id}"
+    },
+
+    // News
+    {
+      "UpstreamPathTemplate": "/News/top-headlines",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/News/top-headlines"
+    },
+
+    // Projects
+    {
+      "UpstreamPathTemplate": "/api/Project",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Project"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Project/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Project/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Project/user/{userId}/projects-by-subthemes",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Project/user/{userId}/projects-by-subthemes"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Project/projects-with-theme",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Project/projects-with-theme"
+    },
+
+    // Project Subthemes
+    {
+      "UpstreamPathTemplate": "/api/ProjectSubthemes",
+      "UpstreamHttpMethod": [ "Post" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ProjectSubthemes"
+    },
+    {
+      "UpstreamPathTemplate": "/api/ProjectSubthemes/{projectId}",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ProjectSubthemes/{projectId}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/ProjectSubthemes/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ProjectSubthemes/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/ProjectSubthemes/projects-by-subthemes",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ProjectSubthemes/projects-by-subthemes"
+    },
+
+
+    // Recommendation
+    {
+      "UpstreamPathTemplate": "/api/recommendation/topfive/{userId}",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/recommendation/topfive/{userId}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/recommendation/{userId}",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/recommendation/{userId}"
+    },
+
+    // SubThemes
+    {
+      "UpstreamPathTemplate": "/api/SubThemes",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/SubThemes"
+    },
+    {
+      "UpstreamPathTemplate": "/api/SubThemes/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/SubThemes/{id}"
+    },
+
+    // Themes
+    {
+      "UpstreamPathTemplate": "/api/Themes",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Themes"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Themes/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "projetoswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Themes/{id}"
+    },
+
+    // User Web Api
+    // User
+    {
+      "UpstreamPathTemplate": "/api/User",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "usuarioswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User"
+    },
+    {
+      "UpstreamPathTemplate": "/api/User",
+      "UpstreamHttpMethod": [ "Post" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "usuarioswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User"
+    },
+    {
+      "UpstreamPathTemplate": "/api/User/{userId}",
+      "UpstreamHttpMethod": [ "Get", "Put" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "usuarioswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User/{userId}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/User/runmodel",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "usuarioswebapi", 
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User/runmodel",
+    },
+    // User Sub Themes
+    {
+      "UpstreamPathTemplate": "/api/UserSubThemes",
+      "UpstreamHttpMethod": [ "Post" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "usuarioswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/UserSubThemes"
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserSubThemes/{userId}",
+      "UpstreamHttpMethod": [ "Get" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "usuarioswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/UserSubThemes/{userId}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserSubThemes/{id}",
+      "UpstreamHttpMethod": [ "Put", "Delete" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "usuarioswebapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/UserSubThemes/{id}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:8000"
+  }
+}

@@ -1,0 +1,51 @@
+version: "3.4"
+
+networks:
+  backend:
+
+services:
+  recomendacao:
+    build: ./RecomendacaoWebApi
+    container_name: recomendacao
+    networks:
+      - backend
+    depends_on:
+      - rabbitmq
+
+  projetoswebapi:
+    container_name: projetos-api
+    image: ${DOCKER_REGISTRY:-projetoswebapi}
+    build:
+      context: .
+      dockerfile: ProjetosWebApi/Dockerfile
+    networks:
+      - backend
+
+  usuarioswebapi:
+    container_name: usuarios-api
+    image: ${DOCKER_REGISTRY:-usuarioswebapi}
+    build:
+      context: .
+      dockerfile: UsuariosWebApi/Dockerfile
+    networks:
+      - backend
+
+  apigateway:
+    container_name: api-gateway
+    image: ${DOCKER_REGISTRY:-apigateway}
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
+    networks:
+      - backend
+    ports:
+      - "8000:8080"
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.9.11-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - backend
